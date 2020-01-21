@@ -37,7 +37,7 @@ class Task02ReduceTest {
         @Test
         @DisplayName("method should work as expected when result is equal to 100")
         void multiplyResultEqual100() {
-            assertEquals(100, Task02Reduce.multiply(Arrays.asList(5, 10)));
+            assertEquals(100, Task02Reduce.multiply(Arrays.asList(10, 10)));
         }
     }
 
@@ -45,13 +45,13 @@ class Task02ReduceTest {
     class IntStreamTests {
 
         @Test
-        @Description("findAverage(0, 10) == 5")
+        @DisplayName("findAverage(0, 10) == 5")
         void averageOfTwo() {
             assertEquals(5, findAverage(new int[]{0, 10}));
         }
 
         @Test
-        @Description("findAverage(None) throws exception")
+        @DisplayName("findAverage(None) throws exception")
         void averageOfNone() {
             assertThrows(RuntimeException.class, () -> findAverage(new int[]{}));
         }
